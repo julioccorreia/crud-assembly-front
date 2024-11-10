@@ -30,7 +30,7 @@
                         <mat-error *ngIf="senhaErro">Senhas não coincidem.</mat-error>
                     </mat-form-field>
                     <button type="submit" class="btn btn-primary btn-block w-50 m-3"
-                        (click)="enviarFormulario()">Entrar</button>
+                        (click)="enviarFormulario()" [disabled]="formularioCadastro.invalid">Entrar</button>
                     <mat-error *ngIf="mensagemErro" class="text-center">Falha ao realizar cadastro!</mat-error>
                 </form>
             </div>

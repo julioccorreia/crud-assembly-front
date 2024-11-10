@@ -17,4 +17,9 @@ export class JogosService {
     const url = `${this.BASE_URL}jogos/listar/${idUsuario}`;
     return this.http.get(url);
   }
+
+  public cadastrarJogo(fk_usuario: string, vc_nome: string): Observable<any> {
+    const url = `${this.BASE_URL}jogos/cadastrar`;
+    return this.http.post(url, { fk_usuario, vc_nome });
+  }
 }

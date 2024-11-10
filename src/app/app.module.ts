@@ -13,13 +13,15 @@ import { ListagemJogosComponent } from './jogos/listagem-jogos/listagem-jogos.co
 import { LoginUsuarioComponent } from './usuarios/login-usuario/login-usuario.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { CadastroJogosComponent } from './jogos/cadastro-jogos/cadastro-jogos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginUsuarioComponent,
     CadastroUsuarioComponent,
-    ListagemJogosComponent
+    ListagemJogosComponent,
+    CadastroJogosComponent
   ],
   imports: [
     BrowserModule,
