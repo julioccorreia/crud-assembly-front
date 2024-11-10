@@ -1,27 +1,56 @@
-# CrudAssembly
+# Projeto Frontend - CRUD com Sistema de Login
+Este é o projeto frontend desenvolvido em Angular, que contém um CRUD com sistema de login. A seguir, estão as instruções para rodar o projeto localmente.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.19.
+## Requisitos
+Node.js (versão 16.10)
+Angular CLI (versão 11.2.19)
+npm (versão 7.24.0)
 
-## Development server
+## Instalação
+### 1. Clonar o repositório
+Clone o repositório do projeto para sua máquina local:
+```
+    git clone <URL_DO_REPOSITORIO>
+    cd <NOME_DO_PROJETO>
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### 2. Instalar as dependências
+Para instalar as dependências do projeto, utilize o comando abaixo, sem atualizá-las:
+```
+    npm ci
+```
 
-## Code scaffolding
+### 3. Configurar ambiente do Backend
+O projeto do backend está localizado em um repositório separado, é necessário clona-lo e configura-lo para que seja possível rodar a aplicação.
+Link do projeto: https://github.com/julioccorreia/crud-assembly-back
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 4. Configurar o IP do Backend
+O projeto frontend precisa se conectar ao backend local para funcionar corretamente. Para isso, é necessário configurar o IP do backend no arquivo de ambiente de desenvolvimento.
 
-## Build
+Abra o arquivo src/environments/environment.ts e localize a variável BASE_URL. Substitua o valor da URL pelo endereço IP local do seu backend:
+```
+    export const environment = {
+        production: false,
+        apiUrl: 'http://<SEU_IP_LOCAL>:<PORTA_DO_BACKEND>/api'
+    };
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### 5. Rodar o Projeto
+Para rodar o projeto em modo de desenvolvimento, utilize o comando:
+```
+    ng serve
+```
 
-## Running unit tests
+Isso iniciará o servidor de desenvolvimento. O projeto será acessível no navegador em:
+```
+    http://localhost:4200
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Funcionalidades
+Login de usuário: Sistema de autenticação para acesso ao CRUD.
+CRUD: Funcionalidades de criar, ler, atualizar e excluir registros.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Tecnologias Utilizadas
+Angular 11
+Bootstrap 5.3
+Angular Material
