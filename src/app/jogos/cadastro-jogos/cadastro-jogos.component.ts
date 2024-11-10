@@ -24,7 +24,6 @@ export class CadastroJogosComponent implements OnInit {
     if(!this.usuariosService.validarUsuario()) {
       window.location.href = '/login';
     }
-    this.criarFormulario();
   }
 
   criarFormulario(): FormGroup {
