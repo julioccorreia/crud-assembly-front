@@ -2,9 +2,9 @@
 Este é o projeto frontend desenvolvido em Angular, que contém um CRUD com sistema de login. A seguir, estão as instruções para rodar o projeto localmente.
 
 ## Requisitos
-Node.js (versão 16.10)
-Angular CLI (versão 11.2.19)
-npm (versão 7.24.0)
+Node.js (versão 16.10)  
+Angular CLI (versão 11.2.19)  
+npm (versão 7.24.0)  
 
 ## Instalação
 ### 1. Clonar o repositório
@@ -51,6 +51,6 @@ Login de usuário: Sistema de autenticação para acesso ao CRUD.
 CRUD: Funcionalidades de criar, ler, atualizar e excluir registros.
 
 ## Tecnologias Utilizadas
-Angular 11
-Bootstrap 5.3
-Angular Material
+Angular 11  
+Bootstrap 5.3  
+Angular Material  
