@@ -1,0 +1,28 @@
+<main class="bg-light">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4 shadow-sm w-100">
+            <div class="card-corpo">
+                <h3 class="titulo text-center mb-4">Login</h3>
+                <form [formGroup]="formularioLogin" class="row justify-content-center">
+                    <mat-form-field class="col-12">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="vc_email" placeholder="Digite seu email" required>
+                        <mat-error *ngIf="exibirErro('vc_email', 'required')">O email é obrigatório.</mat-error>
+                        <mat-error *ngIf="exibirErro('vc_email', 'email')">Formato de email inválido.</mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="col-12">
+                        <mat-label>Senha</mat-label>
+                        <input matInput formControlName="vc_senha" placeholder="Digite sua senha" required>
+                        <mat-error *ngIf="exibirErro('vc_senha', 'required')">A senha é obrigatória.</mat-error>
+                        <mat-error *ngIf="exibirErro('vc_senha', 'minlength')">A senha deve ter no mínimo 6
+                            caracteres.</mat-error>
+                    </mat-form-field>
+                    <button type="submit" class="btn btn-primary btn-block w-50 m-3"
+                        (click)="enviarFormulario()">Entrar</button>
+                    <mat-error *ngIf="mensagemErro" class="text-center">Falha ao realizar login!</mat-error>
+                    <span class="text-center">Cadastre-se <a routerLink="/cadastro">aqui</a></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
