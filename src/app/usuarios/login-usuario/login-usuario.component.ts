@@ -19,6 +19,9 @@ export class LoginUsuarioComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    if(this.usuariosService.validarUsuario()) {
+      window.location.href = '/jogos/listar';
+    }
   }
 
   criarFormulario(): FormGroup {

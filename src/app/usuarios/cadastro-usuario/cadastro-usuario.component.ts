@@ -22,6 +22,9 @@ export class CadastroUsuarioComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    if (this.usuariosService.validarUsuario()) {
+      window.location.href = '/jogos/listar';
+    }
   }
 
   criarFormulario(): FormGroup {
@@ -46,7 +49,7 @@ export class CadastroUsuarioComponent implements OnInit {
 
       this.usuariosService.cadastroUsuario(this.vc_nome, this.vc_email, this.vc_senha).subscribe((resp: any) => {
         this.mensagemErro = '';
-        
+
         localStorage.setItem('usuario_id', resp.id);
         localStorage.setItem('usuario_nome', resp.vc_nome);
 
@@ -65,7 +68,7 @@ export class CadastroUsuarioComponent implements OnInit {
       this.senhaErro = true;
       return false;
     }
-    
+
     this.senhaErro = false;
     return true;
   }

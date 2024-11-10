@@ -32,8 +32,7 @@ export class UsuariosService {
     if((id && nome) && (id !== '' && nome !== '')) {
       return true;
     }
-
-    window.location.href = '/login';
+    
     return false;
   }
 }

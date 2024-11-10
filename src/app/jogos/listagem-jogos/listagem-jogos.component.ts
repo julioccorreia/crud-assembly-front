@@ -22,7 +22,9 @@ export class ListagemJogosComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.usuariosService.validarUsuario();
+    if(!this.usuariosService.validarUsuario()) {
+      window.location.href = '/login';
+    }
     this.popularJogos();
   }
 
