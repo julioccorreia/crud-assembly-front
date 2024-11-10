@@ -17,9 +17,19 @@ export class JogosService {
     const url = `${this.BASE_URL}jogos/listar/${idUsuario}`;
     return this.http.get(url);
   }
-
+  
   public cadastrarJogo(fk_usuario: string, vc_nome: string): Observable<any> {
     const url = `${this.BASE_URL}jogos/cadastrar`;
     return this.http.post(url, { fk_usuario, vc_nome });
+  }
+  
+  public editarJogo(id: string, vc_nome: string, fk_usuario: string): Observable<any> {
+    const url = `${this.BASE_URL}jogos/editar/${id}`;
+    return this.http.put(url, { vc_nome, fk_usuario });
+  }
+
+  public buscarJogoPorId(idJogo: string): Observable<any> {
+    const url = `${this.BASE_URL}jogos/listar/jogo/${idJogo}`;
+    return this.http.get(url);
   }
 }

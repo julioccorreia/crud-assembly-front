@@ -14,6 +14,7 @@ import { LoginUsuarioComponent } from './usuarios/login-usuario/login-usuario.co
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { CadastroJogosComponent } from './jogos/cadastro-jogos/cadastro-jogos.component';
+import { EditarJogosComponent } from './jogos/editar-jogos/editar-jogos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CadastroJogosComponent } from './jogos/cadastro-jogos/cadastro-jogos.co
     LoginUsuarioComponent,
     CadastroUsuarioComponent,
     ListagemJogosComponent,
-    CadastroJogosComponent
+    CadastroJogosComponent,
+    EditarJogosComponent
   ],
   imports: [
     BrowserModule,
