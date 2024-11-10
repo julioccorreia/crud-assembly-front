@@ -28,8 +28,13 @@ export class JogosService {
     return this.http.put(url, { vc_nome, fk_usuario });
   }
 
-  public buscarJogoPorId(idJogo: string): Observable<any> {
-    const url = `${this.BASE_URL}jogos/listar/jogo/${idJogo}`;
+  public buscarJogoPorId(id: string): Observable<any> {
+    const url = `${this.BASE_URL}jogos/listar/jogo/${id}`;
     return this.http.get(url);
+  }
+
+  public excluirJogo(id: string): Observable<any> {
+    const url = `${this.BASE_URL}jogos/excluir/${id}`;
+    return this.http.delete(url);
   }
 }

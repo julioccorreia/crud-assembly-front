@@ -10,7 +10,7 @@
                         <mat-error *ngIf="exibirErro('vc_nome', 'required')">O nome é obrigatório.</mat-error>
                     </mat-form-field>
                     <button type="submit" class="btn btn-primary btn-block w-50 m-3"
-                        (click)="enviarFormulario()" [disabled]="formularioEdicao.invalid">Entrar</button>
+                        (click)="enviarFormulario()" [disabled]="formularioEdicao.invalid">Editar</button>
                     <mat-error *ngIf="mensagemErro" class="text-center">Falha ao realizar edição do jogo!</mat-error>
                     <span class="text-center"><a routerLink="/jogos/listar">Voltar</a></span>
                 </form>

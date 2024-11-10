@@ -14,6 +14,7 @@ export class ListagemJogosComponent implements OnInit {
   public displayedColumns: string[] = ['id', 'vc_nome', 'acoes'];
   public dataSourceJogos: MatTableDataSource<any> = new MatTableDataSource();
   public length: number = 0;
+  public mensagemErro: string = '';
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   constructor(
@@ -22,7 +23,7 @@ export class ListagemJogosComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    if(!this.usuariosService.validarUsuario()) {
+    if (!this.usuariosService.validarUsuario()) {
       window.location.href = '/login';
     }
     this.popularJogos();
@@ -36,10 +37,18 @@ export class ListagemJogosComponent implements OnInit {
     })
   }
 
+  excluirJogo(idJogo: string): void {
+    this.jogosService.excluirJogo(idJogo).subscribe(() => {
+      this.popularJogos();
+    }, (error) => {
+      this.mensagemErro = error.error;
+    })
+  }
+
   sair(): void {
     localStorage.removeItem('usuario_id');
     localStorage.removeItem('usuario_nome');
-    
+
     window.location.href = '/login';
   }
 }
