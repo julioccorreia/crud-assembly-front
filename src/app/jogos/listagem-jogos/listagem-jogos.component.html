@@ -4,7 +4,10 @@
             <h1 class="mb-0 text-center">Listagem de Jogos</h1>
         </div>
         <div class="card-body">
-            <button mat-raised-button color="primary" class="btn btn-sm btn-primary mb-2 px-4 fs-6" routerLink="/jogos/cadastro">Cadastrar</button>
+            <div class="w-100 d-flex justify-content-between">
+                <button mat-raised-button color="primary" class="btn btn-sm btn-primary mb-2 px-4 fs-6" routerLink="/jogos/cadastro">Cadastrar</button>
+                <button mat-raised-button color="primary" class="btn btn-sm btn-danger mb-2 px-4 fs-6" (click)="sair()">Sair</button>
+            </div>
 
             <table mat-table [dataSource]="dataSourceJogos"
                 class="table table-bordered table-striped mat-elevation-z1 align-middle">

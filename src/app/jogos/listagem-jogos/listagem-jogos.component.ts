@@ -35,4 +35,11 @@ export class ListagemJogosComponent implements OnInit {
       this.length = resp.length;
     })
   }
+
+  sair(): void {
+    localStorage.removeItem('usuario_id');
+    localStorage.removeItem('usuario_nome');
+    
+    window.location.href = '/login';
+  }
 }
