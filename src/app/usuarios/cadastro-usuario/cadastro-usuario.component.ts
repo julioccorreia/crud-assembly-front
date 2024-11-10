@@ -38,7 +38,7 @@ export class CadastroUsuarioComponent implements OnInit {
       (this.formularioCadastro.controls[campo].dirty || this.formularioCadastro.controls[campo].touched);
   }
 
-  enviarFormulario() {
+  enviarFormulario(): void {
     if (this.formularioCadastro.valid && this.validarSenhas()) {
       this.vc_nome = this.formularioCadastro.get('vc_nome')?.value;
       this.vc_email = this.formularioCadastro.get('vc_email')?.value;

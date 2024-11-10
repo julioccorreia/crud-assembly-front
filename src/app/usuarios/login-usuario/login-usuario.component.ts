@@ -33,7 +33,7 @@ export class LoginUsuarioComponent implements OnInit {
       (this.formularioLogin.controls[campo].dirty || this.formularioLogin.controls[campo].touched);
   }
 
-  enviarFormulario() {
+  enviarFormulario(): void {
     if (this.formularioLogin.valid) {
       this.vc_email = this.formularioLogin.get('vc_email')?.value;
       this.vc_senha = this.formularioLogin.get('vc_senha')?.value;
